@@ -1,0 +1,122 @@
+#header {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 252px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.in-game-holder.gameover #header{
+    visibility: hidden;
+}
+.in-game-holder.tie #header{
+    visibility: hidden;
+}
+#header p {
+    text-align: center;
+    margin: 0;
+}
+#header img {
+    margin-left: 1rem;
+}
+.position {
+    min-height: 80px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+@media(max-width: 768px){
+    .position{
+        min-width: 30vw;
+        min-height: 30vw;
+    }
+}
+
+.board {
+    width: 100%;
+}
+.board-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.in-game {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+@media(max-width: 768px){
+    .in-game {
+        margin: unset!important;
+    }
+}
+
+.in-game-holder{
+    display: none;
+    flex-direction: column;
+}
+
+.in-game-holder.gameover .position{
+    background-color: #10ff00;
+}
+
+.in-game-holder.tie .position{
+    background-color: #ff3c00;
+}
+
+
+.winner-card {
+    display: none;
+}
+
+.tie-card{
+    display: none;
+}
+
+.in-game-holder.gameover .winner-card{
+    display: flex;
+}
+.in-game-holder.gameover .cancel-game{
+    display: none;
+}
+.in-game-holder.tie .tie-card{
+    display: flex;
+}
+.in-game-holder.tie .cancel-game{
+    display: none;
+}
+
+.saving-screen{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.saving-screen.hidden{
+    display: none;
+}
+
+
+@media(max-width: 768px){
+    .desktop-only{
+        display: none!important;
+    }
+}
+@media(min-width: 769px){
+    .mobile-only{
+        display: none!important;
+    }
+}
